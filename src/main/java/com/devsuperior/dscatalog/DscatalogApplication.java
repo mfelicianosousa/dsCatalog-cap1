@@ -13,16 +13,5 @@ public class DscatalogApplication {
 		SpringApplication.run(DscatalogApplication.class, args);
 	}
 	
-	@Bean
-	public JwtAccessTokenConverter accessTokenConverter() {
-		JwtAccessTokenConverter tokenConverter = new JwtAccessTokenConverter();
-		tokenConverter.setSigningKey("MY-JWT-SECRET");
-		return tokenConverter;
-	}
-
-	@Bean
-	public JwtTokenStore tokenStore() {
-		return new JwtTokenStore(accessTokenConverter());
-	}
-
+	
 }
